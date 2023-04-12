@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="form_empmodule" resource="default" engine="innodb" comment="form_Empmodule">
+
+       <column xsi:type="smallint" name="id" padding="7" unsigned="false" nullable="false" identity="true" comment="ID" />
+      <column xsi:type="varchar" name="empid" nullable="false" length="20" comment="Empid" />
+      <column xsi:type="varchar" name="fname" nullable="false" length="20" comment="first name" />
+      <column xsi:type="varchar" name="lname" nullable="false" length="20" comment="last name" />
+      <column xsi:type="varchar" name="email" nullable="false" length="20" comment="Email" />
+      <column xsi:type="varchar" name="cname" nullable="false" length="20" comment="companyname" />
+      <column xsi:type="varchar" name="dept" nullable="false" length="20" comment="Department name" />
+      <column xsi:type="varchar" name="occupation" nullable="false" length="20" comment="occupation" />
+      <column xsi:type="varchar" name="mobno" nullable="false" length="20" comment="mobile no" />
+      <column xsi:type="varchar" name="address" nullable="false" length="20" comment="address" />
+      <column xsi:type="date" name="jdate" nullable="false" comment="joining date" />
+      <column xsi:type="date" name="bdate" nullable="false"  comment="birthday date" />
+
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+   </table>
+</schema>

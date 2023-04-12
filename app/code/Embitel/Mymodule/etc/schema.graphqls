@@ -1,0 +1,39 @@
+# Copyright © Magento, Inc. All rights reserved.
+# See COPYING.txt for license details.
+
+type Query
+{
+    customer_details:customer_detailsOutput @resolver(class:"Embitel\\Mymodule\\Model\\Resolver\\store") @doc(description:"List of Pickup Stores")
+}
+type customer_detailsOutput
+{
+total_count:Int @doc(description:"Total Stores"),
+items1:[customer_details] @doc(description:"Store Data")
+}
+
+type customer_details
+{
+    firstname:String @doc(description:"firstname"),
+   lastname:String @doc(description:"lastname"),
+    city:String @doc(description:"Store City"),
+    email:String @doc(description:"email"),
+    telephone:String @doc(description:"telephone"),
+    city:String @doc(description:"city"),
+    state:String @doc(description:"state"),
+    Country:String @doc(description:"Country")
+}
+type Mutation {
+    addInfo (input:InfoInput! @doc(description:"An input you have to fill")):
+    addInfoOutput @resolver(class:"Embitel\\Mymodule\\Model\\Resolver\\displaystore")
+    @doc (description:"output of mutation")
+}
+
+input InfoInput {
+    groupId:Int! @doc(description:"enter the groupid")
+    groupName:String! @doc(description:"enter the groupName")
+}
+
+type addInfoOutput {
+    groupId:Int! @doc(description:"status of mutation")
+    groupName:String! @doc(description:"message of mutation")
+}

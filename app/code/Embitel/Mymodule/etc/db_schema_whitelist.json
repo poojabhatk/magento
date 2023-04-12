@@ -1,0 +1,40 @@
+{
+    "md_helloworld": {
+        "column": {
+            "id": true,
+            "author_name": true,
+            "email": true,
+            "description": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "form_empmodule": {
+        "column": {
+            "emp_id": true,
+            "emp_fname": true,
+            "emp_lname": true,
+            "email": true,
+            "cmpny_name": true,
+            "dept_name": true,
+            "occupation": true,
+            "mob_no": true,
+            "address": true,
+            "joindate": true,
+            "dob": true,
+            "id": true,
+            "empid": true,
+            "fname": true,
+            "lname": true,
+            "cname": true,
+            "dept": true,
+            "mobno": true,
+            "jdate": true,
+            "bdate": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
